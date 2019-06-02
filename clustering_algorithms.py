@@ -26,7 +26,7 @@ def normalize_values(X,use_sigma=True):
     mu = sum(X)/m
     if use_sigma:
         sigma = sum(np.square(X-mu))/m
-        X_normalized = np.divide((X-mu),sigma)
+        X_normalized = np.sqrt(np.divide((X-mu),sigma))
     else:
         max_x = np.max(X,axis=0)
         X_normalized = np.divide((X-mu),max_x)
@@ -38,7 +38,7 @@ def initialize_centroids(X, k):
     selects k data points from X and returns the centroid values 
     and location in the index
     paramaters:
-        X: a numpy matrix with dataset of interest
+        X: a numpy matrix with the dataset of interest
         k: number of centroids to initialize
     Returns:
         centroids, cluster_index

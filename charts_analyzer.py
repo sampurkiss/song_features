@@ -64,9 +64,8 @@ def get_music_features(artist_name, song_name):
                    '(?<= )[\+](?= ).+',
                    'duet',
                    '(?<= )[xX](?= )',
-                   #note that this will strip the x off any words that 
-                   #end with x, but there aren't many and spotify will still recognize
-                   #artist name
+                   #note that this will only strip the x away if there's 
+                   #an x with spaces on both sides
                    "'",
                    '\*',
                    "\(",

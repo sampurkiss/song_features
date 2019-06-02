@@ -11,7 +11,7 @@ def compute_cost(X, y, theta, lambda_=None):
     """ This function calculates the cost and gradient values
     for a linear function
     Paramaters:
-        X: numpy matrix with a bias unit already fixed
+        X: numpy matrix with a bias unit already attached
         y: numpy matrix with y values
         theta: a theta matrix
         lambda_: paramater for regularization, this is optional
